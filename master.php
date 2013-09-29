@@ -32,7 +32,6 @@
        <div class="main">
         <?php echo $pagemaincontent; ?> 
         <div id="foot">all images & content &copy; 2013 It&apos;s Oksana&trade;</div>
-        <div class="demotext">Demo 9/28/2013</div>
        </div>
     </div>
     </form>
