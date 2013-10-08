@@ -16,10 +16,9 @@
     <link rel="stylesheet" href="css/responsive.gs.16col.css" media="all"/>
     <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="scripts/respond.min.js"></script>
-    <script type="text/javascript" src="scripts/responsivegridsystem.js"></script>
        <script type="text/javascript" src="scripts/scripts.js" ></script>
      <link rel="stylesheet" href="css/lightbox.css" media="all" />
-    <script type="text/javascript" src="scripts/lightbox-2.6.min.js" ></script>
+    <script type="text/javascript" src="scripts/lightbox-2.6.js" ></script>
     
   <script type="text/javascript">  
   $(document).ready(function() {   
@@ -27,6 +26,7 @@
 				$("body").delay(200).animate({ opacity: 1 }, 200);
 			});
             </script>
+            
 </head>
 <body>
     <form id="form1" runat="server">
@@ -34,7 +34,6 @@
        <div class="main">
         <?php echo $pagemaincontent; ?> 
         <div id="foot">all images & content &copy; 2013 It&apos;s Oksana&trade;</div>
-        <div class="demotext">Demo 9/28/2013</div>
        </div>
     </div>
     </form>
@@ -46,8 +45,10 @@
            $(".headsplash2").css("opacity", "0");
            $(".headsplash1").delay(500).animate({ opacity: 1 }, 500);
            $(".headsplash2").delay(1000).animate({ opacity: 1 }, 500);
+           <?php echo $scriptcontent; ?> ;
        });
     </script>
 
 </body>
+<script type="text/javascript" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
 </html>

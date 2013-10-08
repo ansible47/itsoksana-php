@@ -15,10 +15,13 @@
  
         <div class="row splash1">
           
-            <div class="popup">
-                <div id="title" class="text"><a href="home.php">special events</a></div>
-                 <div id="homepopup"><a href="home.php">(home)</a></div>
-                 </div>
+            <div class="popup span_16">
+            	 	<div id="pinitMain" >
+	       			<a data-pin-do="buttonFollow" href="http://www.pinterest.com/heyox" >It's Oksana&trade;</a>
+	       		</div>
+                <div id="title" class="text span_10"><a href="home.php">special events</a></div>
+                 <div id="homepopup" class="span_4"><a href="home.php">(home)</a></div>
+            </div>
         </div>
         <div class="row span_16">
         <div id="gallery"> 
@@ -71,6 +74,15 @@
 <?php
   //Assign all Page Specific variables
   $pagemaincontent = ob_get_contents();
+  $scriptcontent = "";
+  $var = 0;
+  foreach($texts as $text){
+  	$scriptcontent .= "$('.galsplash" . $var . "').css('opacity', '0');" . "\r";
+  	$scriptcontent .= "$('.galsplash" . $var . "').delay(200*(";
+	$scriptcontent .=  $var+1 ;
+	$scriptcontent .=  ")).animate({ opacity: 1 }, 500);" . "\r";
+	$var = $var + 1;
+	};
   ob_end_clean();
   $pagetitle = "Draperies";
   //Apply the template

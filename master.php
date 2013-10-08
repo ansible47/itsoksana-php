@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>It&apos;s Oksana</title>
+    <title><?php echo $pagetitle ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="css/responsive.gs.16col.css" media="all"/>
     <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="scripts/respond.min.js"></script>
-    <script type="text/javascript" src="scripts/responsivegridsystem.js"></script>
-       <script type="text/javascript" src="scripts/scripts.js" ></script>
+    <script type="text/javascript" src="scripts/scripts.js" ></script>
 
   <script type="text/javascript">  
   $(document).ready(function() {   

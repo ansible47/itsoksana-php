@@ -21,17 +21,21 @@
     "16.jpg" => "Verde Design Studio. Designer Michele Fitzpatrick. Draperies by It&apos;s Oksana.",
     "17.jpg" => "Verde Design Studio. Designer Michele Fitzpatrick. Draperies by It&apos;s Oksana.",
 	);
-  $path = "images/draperies/"
+  $path = "images/draperies/";
+  $scripts = "";
 ?>
 
  
-        <div class="row splash1">
-          
-            <div class="popup">
-                <div id="title" class="text"><a href="home.php">draperies</a></div>
-                 <div id="homepopup"><a href="home.php">(home)</a></div>
-                 </div>
-        </div>
+        <div class="row splash1 ">
+
+            <div class="popup span_16">
+            	<div id="pinitMain" >
+	       			<a data-pin-do="buttonFollow" href="http://www.pinterest.com/heyox" >It's Oksana&trade;</a>
+	       		</div>
+                <div id="title" class="text span_10"><a href="home.php">draperies</a></div>
+                 <div id="homepopup" class="span_4"><a href="home.php">(home)</a></div>
+            </div>
+       	</div>
         <div class="row span_16">
         <div id="gallery"> 
 	
@@ -42,11 +46,12 @@
 
 		//get all text files with a .txt extension.
 		$texts = glob($directory . "*.[jJ][pP][gG]");
-		
+		$var = 0;
 		//print each file name
 		foreach($texts as $text)
 		{
 			if (str_replace($directory, "", $text) != "."){
+				
 				$filename = str_replace($directory, "", $text);
 				$text =  str_replace("../itsoksana/", "", $text);
 				echo "<a href='";
@@ -55,9 +60,12 @@
 				echo $captions[strtolower($filename)];
 				echo "'> <img src='";
 				echo $text;
-				echo "' class='gallery-img' alt='img_'"; 
-				echo strtolower($filename);
+				echo "' class='gallery-img galsplash";
+				echo $var;
+				echo "' alt='"; 
+				echo $captions[strtolower($filename)];
 				echo "' /> </a>";
+				$var = $var + 1;
 			}
 		}
 		?>
@@ -68,6 +76,7 @@
             <a href="home.php">
                 <img class="headerimg" src="images/menu.jpg" alt="head icon" />
             </a>
+
         </div>
         <div class="row">
         <br />
@@ -83,6 +92,15 @@
 <?php
   //Assign all Page Specific variables
   $pagemaincontent = ob_get_contents();
+  $scriptcontent = "";
+  $var = 0;
+  foreach($texts as $text){
+  	$scriptcontent .= "$('.galsplash" . $var . "').css('opacity', '0');" . "\r";
+  	$scriptcontent .= "$('.galsplash" . $var . "').delay(200*(";
+	$scriptcontent .=  $var+1 ;
+	$scriptcontent .=  ")).animate({ opacity: 1 }, 500);" . "\r";
+	$var = $var + 1;
+	};
   ob_end_clean();
   $pagetitle = "Draperies";
   //Apply the template

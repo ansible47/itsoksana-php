@@ -22,7 +22,7 @@
         </div>
         <div class="popup">
             <div class="row splash1">
-                <div id="contact" class="text"> <a href="contact.aspx">contact</a></div>
+                <div id="contact" class="text"> <a href="contact.php">contact</a></div>
             </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
   //Assign all Page Specific variables
   $pagemaincontent = ob_get_contents();
   ob_end_clean();
-  $pagetitle = "Oksana Home";
+  $pagetitle = "It's Oksana&trade; Home";
   //Apply the template
   include("master.php");
 ?>

@@ -67,6 +67,13 @@ link:hover
     margin-right:18%; 
 }
 
+#pinitMain
+{  
+    position:absolute;
+    right:8%;
+    min-width:75px;
+}
+
 .icon:hover
 {
     margin-bottom:2.5%;

@@ -5,13 +5,13 @@
   
            <div class="row splash2" >
                  <div class="row">
-                        <a href="home.aspx">
+                        <a href="home.php">
                             <img class="headerimg" src="images/menu.jpg" alt="head icon" />
                         </a>
                     </div>
                     <div class="row">
                     <br />
-                        <a href="home.aspx">
+                        <a href="home.php">
                          <img class="headsplash1" src="images/hometext1.jpg" alt="it's"/>
                          <img class="headsplash2" src="images/hometext2.jpg" alt="oksana"/>
                          </a>
