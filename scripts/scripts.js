@@ -69,3 +69,79 @@ function shuffle(array) {
 
     return array;
 }
+
+/*
+ * 			$filename = str_replace($directory, "", $text);
+				$text =  str_replace("../itsoksana/", "", $text);
+				$pinit = getPinit($text, $captions[strtolower($filename)]);
+				$thumbnail = str_replace("images/", "images/thumbnails/", $text);
+				//echo "<div class='gallery-img-container galsplash" . $var ."'>";
+				
+				echo "<div class='pinner' id='img_".$var."'>";
+				
+				echo "<a class='' href='" . $text . "' rel='lightbox-Draperies' title='" . $captions[strtolower($filename)] ."' > ";
+				echo "<img src='". strtolower($thumbnail) ."' class='gallery-img'  alt='" . str_replace("\"", "\'", $captions[strtolower($filename)]) . "' onClick='getPin(\"#social_".$var . "\")'  />";
+				echo "</a>";
+				echo "<div class='social' id='social_".$var . "'>".$pinit."</div>";
+				echo "</div>";
+ */
+
+	
+function fillMainGallery(images){
+	split = images.split(",");
+	gallery = $('#galleryMain');
+	//alert(split)
+		var loaded = 0;
+		for (var x = 0; x<split.length-1; x++){
+				
+	            var url =  split[x].replace("../itsoksana/", "");
+	            
+	            var thumb = url.replace("images", "images/thumbnails");
+	            
+	            a = document.createElement("a");
+	            a.href = url;
+	            a.rel="lightbox"
+	            a.title ="Hello!"
+                img = document.createElement('img');
+                img.className = "gallery-img"
+                img.alt = "Image " + x.toString();
+                a.appendChild(img)
+                        // lazy show the photos one by one
+                        //alert(img)
+                img.src=thumb
+                gallery[0].appendChild(a);
+                img.onload = function(e, count){
+                   img.onload = null;
+           
+                                gallery.append("Hello!");
+                        
+                                setTimeout( function(){
+                                        $(img).addClass('loaded');
+                                }, 25*loaded);
+                                
+                        };
+                        loaded=+1;
+                        
+                        img['largeUrl'] = url
+                        img.src = thumb
+		}
+}
+
+			
+
+function loadImagesInSequence(images) {
+  if (!images.length) {
+    return;
+  }
+  
+  alert(images)
+
+  var img = new Image(),
+  url = images.shift();
+
+  img.onload = function(){ loadImagesInSequence(images) };
+  img.src = url;
+  
+  
+  
+}

@@ -11,7 +11,7 @@
     -ms-border-radius: 2.5px;
     -o-border-radius: 2.5px;
     border-radius: 2.5px;
-       -webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
    -moz-transition: all 0.5s ease;
    -o-transition: all 0.5s ease;
    transition: all 0.5s ease;
@@ -344,3 +344,118 @@ img.headerimg
  text-align:center;  
  height:15px; 
 }
+
+.pinit2
+{
+	position:relative;
+	left:5%;
+	top:-95%;
+	width:25px;	
+		
+}
+
+.item{
+		-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+
+	height:320px;
+	margin-right:22px;
+	float:left;
+	position:relative;
+	margin-top:20px;
+	margin-bottom:40px;
+}
+
+#shopMain{
+	margin-left:40px;
+}
+
+#shopHeader{
+	margin-left:40px;	
+
+}
+
+.shopImg{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+}
+
+.addtocart{
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background-color:black;
+	color:white;
+	width:80%;
+	margin-top:5px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.buyitnow{
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background-color:black;
+	color:white;
+	width:80%;
+	margin-top:5px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.viewcart{
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background-color:black;
+	color:white;
+	width:100px;
+	margin-top:5px;
+	text-align:center;
+}
+
+.shopDesc{
+	margin-left:5%;
+	margin-top:1%;
+}
+
+#prodFoot{
+	position:absolute;
+	bottom:5%;
+	margin-left:auto;
+	margin-right:auto;
+ width:100%;
+  color:	#014063;
+ text-align:center;  
+}
+
+.prodButton{
+ 	position:relative;
+ 	left:12.5%;
+ 	margin-top:12.5%;
+
+}
+
+.prodImg{
+	margin-left:1%;
+	margin-top:1%;
+		-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.tbox {position:absolute; padding:14px 17px; z-index:900}
+.tinner {padding:15px; -moz-border-radius:5px; border-radius:5px; background:#fff url(images/preload.gif) no-repeat 50% 50%; border-right:1px solid #333; border-bottom:1px solid #333}
+.tmask {position:absolute; top:0px; left:0px; height:100%; width:100%; background:#000; z-index:800}
+.tclose {position:absolute; top:0px; right:0px; width:30px; height:30px; cursor:pointer; background:url(images/close.png) no-repeat}
+.tclose:hover {background-position:0 -30px}
+.tcontent{display:block;}
+
+
+

@@ -17,8 +17,12 @@
     <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="scripts/respond.min.js"></script>
        <script type="text/javascript" src="scripts/scripts.js" ></script>
-     <link rel="stylesheet" href="css/lightbox.css" media="all" />
+    <link rel="stylesheet" href="css/lightbox.css" media="all" />
     <script type="text/javascript" src="scripts/lightbox-2.6.js" ></script>
+    <link rel="stylesheet" href="css/jquery.pinit.css" media="all" />
+	<script type="text/javascript" id="cljs" src="https://itsoksana.cartloom.com/cart.js"></script>
+    <script type="text/javascript" src="scripts/tinybox.js"></script>
+
     
   <script type="text/javascript">  
   $(document).ready(function() {   
@@ -34,21 +38,28 @@
        <div class="main">
         <?php echo $pagemaincontent; ?> 
         <div id="foot">all images & content &copy; 2013 It&apos;s Oksana&trade;</div>
+
+
        </div>
     </div>
     </form>
-
+	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
     <script type="text/javascript" src="scripts/respond.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.pinit.js"></script>
         <script language="javascript" type="text/javascript">
        $(document).ready(function () {
            $(".headsplash1").css("opacity", "0");
            $(".headsplash2").css("opacity", "0");
            $(".headsplash1").delay(500).animate({ opacity: 1 }, 500);
            $(".headsplash2").delay(1000).animate({ opacity: 1 }, 500);
+          
            <?php echo $scriptcontent; ?> ;
        });
-    </script>
 
+
+       
+    </script>
+     
 </body>
-<script type="text/javascript" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+<!--<script type="text/javascript" data-pin-hover="true"  src="//assets.pinterest.com/js/pinit.js"></script>-->
 </html>

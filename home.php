@@ -29,7 +29,7 @@
       
         <div class="row" id="bodycontent">
          <div class="col span_4" id="nav1">
-               <a href="draperies.php" class="bounce">
+               <a href="shop.php" class="bounce">
                      <img class="splash1 navimg1" src="images/menuimg1.jpg" alt="" style=""/>
                      <img class="splash2 navtext" src="images/drapariestext.jpg" alt="" style=""/>
                </a>

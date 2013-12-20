@@ -21,6 +21,8 @@
     "16.jpg" => "Verde Design Studio. Designer Michele Fitzpatrick. Draperies by It&apos;s Oksana.",
     "17.jpg" => "Verde Design Studio. Designer Michele Fitzpatrick. Draperies by It&apos;s Oksana.",
 	);
+	
+
   $path = "images/draperies/";
   $scripts = "";
 ?>
@@ -30,16 +32,16 @@
 
             <div class="popup span_16">
             	<div id="pinitMain" >
-	       			<a data-pin-do="buttonFollow" href="http://www.pinterest.com/heyox" >It's Oksana&trade;</a>
+	       			<a data-pin-do="buttonFollow" href="http://www.pinterest.com/oambrose" >It's Oksana&trade;</a>
 	       		</div>
                 <div id="title" class="text span_10"><a href="home.php">draperies</a></div>
                  <div id="homepopup" class="span_4"><a href="home.php">(home)</a></div>
             </div>
        	</div>
         <div class="row span_16">
-        <div id="gallery"> 
-	
-	
+        <div id="galleryMain"> 
+        	
+
 		<?php
 		//path to directory to scan
 		$directory = "../itsoksana/images/draperies/";
@@ -54,17 +56,8 @@
 				
 				$filename = str_replace($directory, "", $text);
 				$text =  str_replace("../itsoksana/", "", $text);
-				echo "<a href='";
-				echo $text;
-				echo "' data-lightbox='Draperies'; Title='";
-				echo $captions[strtolower($filename)];
-				echo "'> <img src='";
-				echo $text;
-				echo "' class='gallery-img galsplash";
-				echo $var;
-				echo "' alt='"; 
-				echo $captions[strtolower($filename)];
-				echo "' /> </a>";
+				//echo "<a href='" . $text . "' rel='lightbox-Draperies' title='" . $captions[strtolower($filename)] ."'> ";
+				//echo "<img src='". $text ."' class='pinit gallery-img galsplash" . $var ."' alt='" . $captions[strtolower($filename)] . "' /></a>";
 				$var = $var + 1;
 			}
 		}
@@ -88,6 +81,13 @@
             <div class="row splash2">
                  <div id="contact"><a href="contact.php">contact</a></div>
             </div>
+            
+        <script language="javascript" type="text/javascript">
+        var images;
+        images = "<?php foreach($texts as $text){echo $text . ",";}  ?>";
+ 
+        fillMainGallery(images);
+    </script>
 
 <?php
   //Assign all Page Specific variables
